@@ -1,4 +1,4 @@
-# InterimPop
+# SLAInterimPop
 
 Singapore temporary-land activation hackathon MVP. Next.js App Router, React, TypeScript, Tailwind CSS, shadcn-style Button, Framer Motion and React Leaflet.
 
