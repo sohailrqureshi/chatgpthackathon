@@ -54,7 +54,7 @@ export default function Home() {
             <em>In seconds.</em>
           </h1>
           <p className="hero-description">
-            Activate vacant state land in seconds. Your AI co-pilot for finding
+            Explore 2,706 SLA land and property records. Your planning co-pilot for finding
             the right space, making sense of the paperwork, and bringing your
             next big idea to life.
           </p>
@@ -111,10 +111,10 @@ export default function Home() {
               <MapPin size={23} />
             </div>
             <div>
-              <small>IT’S A MATCH</small>
+              <small>EXPLORE THE SLA SNAPSHOT</small>
               <h3>Bedok North</h3>
               <p>
-                600 m² <span>•</span> Community & pop-up events
+                Official boundaries <span>•</span> Availability to be confirmed
               </p>
             </div>
             <Link href="/dashboard" aria-label="Explore Bedok North">
@@ -162,14 +162,14 @@ export default function Home() {
             {
               icon: Calculator,
               title: "Know your numbers.",
-              label: "02 / INSTANT TOL COSTING",
+              label: "02 / SOURCED EVENT COSTING",
               body: "Turn square metres and dates into clear indicative costs. Less spreadsheet gymnastics. More getting started.",
             },
             {
               icon: Users,
-              title: "A little local wisdom.",
-              label: "03 / HYPER-LOCAL INSIGHTS",
-              body: "Meet the Auntie Footfall Index. Get a playful feel for the neighbourhood, from morning crowds to curious otters.",
+              title: "Evidence you can trace.",
+              label: "03 / PLANNING CONTEXT",
+              body: "Inspect cadastral lot references, land-use intersections and source dates. See what is known and what still needs checking.",
             },
           ].map((f) => (
             <article key={f.label}>
@@ -199,7 +199,7 @@ export default function Home() {
           {[
             "Tell us what you’re dreaming up.",
             "Find a space that fits.",
-            "Explore costs. Draft your application.",
+            "Explore costs. Prepare a proposal brief.",
           ].map((s, i) => (
             <div key={s}>
               <span>0{i + 1}</span>
@@ -213,7 +213,7 @@ export default function Home() {
         <div>
           <Sparkles size={22} />
           <h2>A fresh idea deserves a little space.</h2>
-          <p>Free to explore. Built as an SLA hackathon prototype.</p>
+          <p>Free to explore. Built as an independent hackathon prototype using SLA open data.</p>
         </div>
         <Button asChild>
           <Link href="/dashboard">

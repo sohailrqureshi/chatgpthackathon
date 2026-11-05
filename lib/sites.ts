@@ -1,51 +1,12 @@
-export const sites = [
-  {
-    id: "BD-003",
-    name: "Bedok North",
-    district: "THE EAST",
-    area: 600,
-    zoning: "Community / commercial (demo)",
-    center: [1.332, 103.93] as [number, number],
-    footfall: "8.5/10 — Prime morning market crowd",
-    otters: "Low, but guard your artisan bakes",
-    points: [
-      [1.3308, 103.9285],
-      [1.3308, 103.931],
-      [1.333, 103.931],
-      [1.333, 103.9285],
-    ] as [number, number][],
-  },
-  {
-    id: "KL-002",
-    name: "Kallang Riverside",
-    district: "CENTRAL",
-    area: 850,
-    zoning: "Recreation (demo)",
-    center: [1.307, 103.867] as [number, number],
-    footfall: "7.2/10 — Weekend walkers welcome",
-    otters: "High — the locals have whiskers",
-    points: [
-      [1.306, 103.866],
-      [1.306, 103.8685],
-      [1.308, 103.8685],
-      [1.308, 103.866],
-    ] as [number, number][],
-  },
-  {
-    id: "TP-001",
-    name: "Tanjong Pagar",
-    district: "CITY",
-    area: 500,
-    zoning: "Commercial (demo)",
-    center: [1.276, 103.843] as [number, number],
-    footfall: "9.1/10 — Lunch-hour legends",
-    otters: "Low — more bankers than otters",
-    points: [
-      [1.275, 103.842],
-      [1.275, 103.844],
-      [1.277, 103.844],
-      [1.277, 103.842],
-    ] as [number, number][],
-  },
-];
-export type Site = (typeof sites)[number];
+export type Site = {
+  id: string; assetId: string | null; name: string; district: string; category: string;
+  area: number; calculatedArea: number; street: string | null; postal: string | null;
+  survey: string | null; updated: string; center: [number,number]; bounds: [[number,number],[number,number]];
+  lots: string[]; zoning: {name:string;percent:number}[]; reserveArea: number; reserveLots: string[];
+};
+export type Metadata = {
+  count:number;featured:string[];snapshot:string;method:string;geometryRepairs:number;
+  sources:Record<string,{url:string;count:number;sha256:string;retrieved:string}>;
+};
+export const number = (n:number) => n.toLocaleString('en-SG',{maximumFractionDigits:0});
+export const money = (n:number) => n.toLocaleString('en-SG',{style:'currency',currency:'SGD'});
